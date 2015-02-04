@@ -12,7 +12,9 @@ var express = require('express'),
     server = http.createServer(app),
     io = require('socket.io').listen(server);
 
-server.listen(8080);
+//app.listen(process.env.PORT || 8080, function(){
+    server.listen(8080);
+//}
 
 app.configure(function() {
     app.set('port', process.env.PORT || 8080);
@@ -25,6 +27,8 @@ app.configure(function() {
     app.use(express.methodOverride());
     app.use(app.router);
     app.use(express.static(path.join(__dirname, 'public')));
+    app.set("transports", ["xhr-polling"]); 
+    app.set("polling duration", 10); 
 });
 
 app.configure('development', function() {

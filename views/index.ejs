@@ -1,41 +1,21 @@
 <% include header %>
 
-<!-- <script type="text/javascript">
-var socket = io.connect('http://localhost:8080');
-socket.on('connect', function(msg) {
-  console.log("connect");
-  document.getElementById("connectId").innerHTML = 
-    "あなたの接続ID::" + socket.socket.transport.sessid;
-  document.getElementById("type").innerHTML = 
-    "接続方式::" + socket.socket.transport.name;
-});
-
-socket.on('message', function(msg) {
-  document.getElementById("receiveMsg").innerHTML = msg.value;
-});
-
-function SendMsg() {
-  var msg = document.getElementById("message").value;
-  socket.emit('message', { value: msg });
-}
-
-function DisConnect() {
-  var msg = socket.socket.transport.sessid + "は切断しました。";
-  socket.emit('message', { value: msg });
-  socket.disconnect();
-}
-</script> -->
-
-<!-- <div id="connectId"></div>
-<div id="type"></div>
-<br>
-<input type="text" id="message" value="">
-<input type="button" value="メッセージを送る" onclick="SendMsg()">
-<input type="button" value="切断する" onclick="DisConnect()">
-<div id="receiveMsg"></div> -->
-
 <div class="container">
-<h1>Cube Quiz</h1>
-<div id="svg"></div>
-
+  <h1>ブレンダー</h1>
+  <div id="svg"></div>
+  <div class="control-panel">
+    <div class="btn-group" data-toggle="buttons" id="level">
+      <label class="btn btn-default btn-lg">
+	<input type="radio" name="level" value="3">初 級
+      </label>
+      <label class="btn btn-default btn-lg active" >
+	<input type="radio" name="level" value="4">中 級
+      </label>
+      <label class="btn btn-default btn-lg">
+	<input type="radio" name="level" value="5">上 級
+      </label>
+    </div>
+    <div id="answer">
+    </div>
+  </div><!-- .control-panel -->
 <% include footer %>

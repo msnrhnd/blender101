@@ -1,0 +1,78 @@
+@import "bootstrap";
+@import "compass";
+@import "compass/css3/font-face";
+@import "compass/reset";
+@import "sassy-buttons";
+
+$main-width: 980px;
+
+@mixin fontsize($size: 24, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+@mixin font {
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+html {
+  @include font;
+  @include fontsize(14);
+  line-height: 1.6;
+}
+
+.container {
+  width: $main-width;
+  margin: 0 auto;
+}
+
+p {
+  text-align: justify;
+  margin-bottom: 1em;
+}
+
+h1 {
+  @include fontsize(26);
+}
+
+#svg {
+  width: $main-width / 2;
+  float: left;
+}
+
+$btn-width: $main-width / 5;
+$btn-margin: $btn-width / 20;
+
+.control-panel {
+  @include fontsize(22);
+  text-align: center;
+  #level {
+    .btn {
+      width: $btn-width / 3 * 2;
+    }
+  }
+  #answer {
+    margin: $btn-margin;
+    .btn {
+      width: $btn-width;
+      margin: $btn-margin;
+    }
+    .result {
+      @include fontsize(24);
+      font-weight: bold;
+      text-align: center;
+      &.correct {
+        color: blue;
+      }
+      &.incorrect {
+        color: red;
+      }
+    }
+  }
+}
+
+footer {
+  clear: both;
+  text-align: right;
+  @include fontsize(12);
+}
