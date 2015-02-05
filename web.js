@@ -3,11 +3,10 @@
  * Node Sever Script 
  */
 
-var express = require('express')
-  ,http = require('http')
-  ,path = require('path');
-
-var app = express();
+var express = require('express'),
+    http = require('http'),
+    path = require('path'),
+    app = express();
 
 app.configure(function() {
   app.set('port', process.env.PORT || 8080);

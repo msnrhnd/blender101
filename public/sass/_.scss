@@ -35,44 +35,11 @@ h1 {
   @include fontsize(26);
 }
 
-#svg {
-  width: $main-width / 2;
-  float: left;
-}
-
 $btn-width: $main-width / 5;
 $btn-margin: $btn-width / 20;
-
-.control-panel {
-  @include fontsize(22);
-  text-align: center;
-  #level {
-    .btn {
-      width: $btn-width / 3 * 2;
-    }
-  }
-  #answer {
-    margin: $btn-margin;
-    .btn {
-      width: $btn-width;
-      margin: $btn-margin;
-    }
-    .result {
-      @include fontsize(24);
-      font-weight: bold;
-      text-align: center;
-      &.correct {
-        color: blue;
-      }
-      &.incorrect {
-        color: red;
-      }
-    }
-  }
-}
 
 footer {
   clear: both;
   text-align: right;
-  @include fontsize(12);
+  font-size: .8rem;
 }
