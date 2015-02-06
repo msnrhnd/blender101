@@ -17,9 +17,20 @@ $main-width: 980px;
 
 html {
   @include font;
-  @include fontsize(14);
+  @include fontsize(24);
   line-height: 1.6;
 }
+
+.header {
+  height: 4rem;
+}
+
+ol {
+  li {
+    list-style-type: decimal;
+  }
+}
+
 
 .container {
   width: $main-width;
@@ -32,7 +43,15 @@ p {
 }
 
 h1 {
-  @include fontsize(26);
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-weight: bold;
 }
 
 $btn-width: $main-width / 5;

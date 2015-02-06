@@ -7657,74 +7657,51 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 18, ../sass/_.scss */
 html {
   font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 1.6;
 }
 
 /* line 24, ../sass/_.scss */
+.header {
+  height: 4rem;
+}
+
+/* line 29, ../sass/_.scss */
+ol li {
+  list-style-type: decimal;
+}
+
+/* line 35, ../sass/_.scss */
 .container {
   width: 980px;
   margin: 0 auto;
 }
 
-/* line 29, ../sass/_.scss */
+/* line 40, ../sass/_.scss */
 p {
   text-align: justify;
   margin-bottom: 1em;
 }
 
-/* line 34, ../sass/_.scss */
+/* line 45, ../sass/_.scss */
 h1 {
-  font-size: 26px;
-  font-size: 1.625rem;
+  font-size: 2rem;
 }
 
-/* line 38, ../sass/_.scss */
-#svg {
-  width: 490px;
-  float: left;
+/* line 49, ../sass/_.scss */
+h2 {
+  font-size: 1.6rem;
 }
 
-/* line 46, ../sass/_.scss */
-.control-panel {
-  font-size: 22px;
-  font-size: 1.375rem;
-  text-align: center;
-}
-/* line 50, ../sass/_.scss */
-.control-panel #level .btn {
-  width: 130.6666666667px;
-}
-/* line 54, ../sass/_.scss */
-.control-panel #answer {
-  margin: 9.8px;
-}
-/* line 56, ../sass/_.scss */
-.control-panel #answer .btn {
-  width: 196px;
-  margin: 9.8px;
-}
-/* line 60, ../sass/_.scss */
-.control-panel #answer .result {
-  font-size: 24px;
-  font-size: 1.5rem;
+/* line 53, ../sass/_.scss */
+h3 {
   font-weight: bold;
-  text-align: center;
-}
-/* line 64, ../sass/_.scss */
-.control-panel #answer .result.correct {
-  color: blue;
-}
-/* line 67, ../sass/_.scss */
-.control-panel #answer .result.incorrect {
-  color: red;
 }
 
-/* line 74, ../sass/_.scss */
+/* line 60, ../sass/_.scss */
 footer {
   clear: both;
   text-align: right;
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: .8rem;
 }
