@@ -7654,7 +7654,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 18, ../sass/_.scss */
+/* line 24, ../sass/_.scss */
 html {
   font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
   font-size: 24px;
@@ -7662,46 +7662,91 @@ html {
   line-height: 1.6;
 }
 
-/* line 24, ../sass/_.scss */
+/* line 30, ../sass/_.scss */
 .header {
+  position: fixed;
+  top: 1%;
+  left: 1%;
   height: 4rem;
+  background-color: white;
 }
 
-/* line 29, ../sass/_.scss */
-ol li {
+/* line 38, ../sass/_.scss */
+.container {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1%;
+  min-height: 60%;
+}
+
+/* line 46, ../sass/_.scss */
+h1 {
+  font-size: 2rem;
+  margin-bottom: .8em;
+}
+
+/* line 54, ../sass/_.scss */
+.main {
+  text-align: justify;
+  padding: 4rem 0 0 16.464%;
+  width: 82.32%;
+}
+/* line 58, ../sass/_.scss */
+.main h2 {
+  font-size: 1.6rem;
+  margin-bottom: .4em;
+}
+/* line 62, ../sass/_.scss */
+.main h3 {
+  font-weight: bold;
+  margin-bottom: .4em;
+}
+/* line 66, ../sass/_.scss */
+.main p {
+  margin-bottom: 1em;
+}
+/* line 69, ../sass/_.scss */
+.main ul {
+  margin-bottom: 1em;
+}
+/* line 72, ../sass/_.scss */
+.main ol {
+  margin-bottom: 1em;
+}
+/* line 74, ../sass/_.scss */
+.main ol li {
   list-style-type: decimal;
 }
 
-/* line 35, ../sass/_.scss */
-.container {
-  width: 980px;
+/* line 84, ../sass/_.scss */
+.sidebar {
+  position: fixed;
+  top: 1%;
+  left: 83.32%;
+  width: 15.68%;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
+}
+
+/* line 93, ../sass/_.scss */
+.control-panel {
+  position: fixed;
+  bottom: 1%;
   margin: 0 auto;
 }
 
-/* line 40, ../sass/_.scss */
-p {
-  text-align: justify;
-  margin-bottom: 1em;
-}
-
-/* line 45, ../sass/_.scss */
-h1 {
-  font-size: 2rem;
-}
-
-/* line 49, ../sass/_.scss */
-h2 {
-  font-size: 1.6rem;
-}
-
-/* line 53, ../sass/_.scss */
-h3 {
-  font-weight: bold;
-}
-
-/* line 60, ../sass/_.scss */
+/* line 99, ../sass/_.scss */
 footer {
-  clear: both;
+  position: fixed;
+  left: 1%;
+  bottom: 1%;
+  width: 99%;
+}
+/* line 104, ../sass/_.scss */
+footer .signature {
+  position: relative;
+  right: 1%;
   text-align: right;
   font-size: .8rem;
 }

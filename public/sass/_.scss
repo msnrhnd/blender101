@@ -4,7 +4,13 @@
 @import "compass/reset";
 @import "sassy-buttons";
 
-$main-width: 980px;
+$full-width: 100%;
+$full-height: 100%;
+$bevel: $full-width * .01;
+$main-width: ($full-width - $bevel * 2) * .84;
+$main-indent: $main-width * .2;
+$side-width: ($full-width - $bevel * 2) * .16;
+$header-height: 4rem;
 
 @mixin fontsize($size: 24, $base: 16) {
   font-size: $size + px;
@@ -22,43 +28,83 @@ html {
 }
 
 .header {
-  height: 4rem;
+  position: fixed;
+  top: $bevel;
+  left: $bevel;
+  height: $header-height;
+  background-color: white;
 }
-
-ol {
-  li {
-    list-style-type: decimal;
-  }
-}
-
 
 .container {
-  width: $main-width;
+  position: absolute;
+  width: $full-width;
   margin: 0 auto;
-}
-
-p {
-  text-align: justify;
-  margin-bottom: 1em;
+  padding: $bevel;
+  min-height: $full-height * .6;
 }
 
 h1 {
   font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.6rem;
-}
-
-h3 {
-  font-weight: bold;
+  margin-bottom: .8em;
 }
 
 $btn-width: $main-width / 5;
 $btn-margin: $btn-width / 20;
 
+.main {
+  text-align: justify;
+  padding: $header-height 0 0 $main-indent;
+  width: $main-width;
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: .4em;
+  }
+  h3 {
+    font-weight: bold;
+    margin-bottom: .4em;
+  }
+  p {
+    margin-bottom: 1em;
+  }
+  ul {
+    margin-bottom: 1em;
+  }
+  ol {
+    margin-bottom: 1em;
+    li {
+      list-style-type: decimal;
+    }
+  }
+}
+
+emphasis {
+
+}
+
+.sidebar {
+  position: fixed;
+  top: $bevel;
+  left: $main-width + $bevel;
+  width: $side-width;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
+}
+
+.control-panel {
+  position: fixed;
+  bottom: $bevel;
+  margin: 0 auto;
+}
+
 footer {
-  clear: both;
-  text-align: right;
-  font-size: .8rem;
+  position: fixed;
+  left: $bevel;
+  bottom: $bevel;
+  width: $full-width - $bevel;
+  .signature {
+    position: relative;
+    right: $bevel;
+    text-align: right;
+    font-size: .8rem;
+  }
 }
