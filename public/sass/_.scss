@@ -52,6 +52,9 @@ $btn-width: $main-width / 5;
 $btn-margin: $btn-width / 20;
 
 .main {
+  section {
+    min-height: 32rem;
+  }
   text-align: justify;
   padding: $header-height 0 0 $main-indent;
   width: $main-width;
@@ -81,7 +84,7 @@ emphasis {
 
 }
 
-.sidebar {
+#sidebar {
   position: fixed;
   top: $bevel;
   left: $main-width + $bevel;

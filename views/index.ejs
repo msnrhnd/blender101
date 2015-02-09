@@ -1,6 +1,10 @@
 <% include elements/header %>
 <div class="main">
-<% include basic/finddigits %>
+<% if (sec) { %>
+<%- include(sec + '/index') %>
+<% } else { %>
+<h2>ブレンダー入門</h2>
+<% } %>
 </div><!-- .main -->
 <% include elements/side %>
 <% include elements/footer %>

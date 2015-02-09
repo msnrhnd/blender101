@@ -7692,35 +7692,39 @@ h1 {
   padding: 4rem 0 0 16.464%;
   width: 82.32%;
 }
-/* line 58, ../sass/_.scss */
+/* line 55, ../sass/_.scss */
+.main section {
+  min-height: 32rem;
+}
+/* line 61, ../sass/_.scss */
 .main h2 {
   font-size: 1.6rem;
   margin-bottom: .4em;
 }
-/* line 62, ../sass/_.scss */
+/* line 65, ../sass/_.scss */
 .main h3 {
   font-weight: bold;
   margin-bottom: .4em;
 }
-/* line 66, ../sass/_.scss */
+/* line 69, ../sass/_.scss */
 .main p {
   margin-bottom: 1em;
 }
-/* line 69, ../sass/_.scss */
+/* line 72, ../sass/_.scss */
 .main ul {
   margin-bottom: 1em;
 }
-/* line 72, ../sass/_.scss */
+/* line 75, ../sass/_.scss */
 .main ol {
   margin-bottom: 1em;
 }
-/* line 74, ../sass/_.scss */
+/* line 77, ../sass/_.scss */
 .main ol li {
   list-style-type: decimal;
 }
 
-/* line 84, ../sass/_.scss */
-.sidebar {
+/* line 87, ../sass/_.scss */
+#sidebar {
   position: fixed;
   top: 1%;
   left: 83.32%;
@@ -7729,21 +7733,21 @@ h1 {
   border-bottom: 1px black solid;
 }
 
-/* line 93, ../sass/_.scss */
+/* line 96, ../sass/_.scss */
 .control-panel {
   position: fixed;
   bottom: 1%;
   margin: 0 auto;
 }
 
-/* line 99, ../sass/_.scss */
+/* line 102, ../sass/_.scss */
 footer {
   position: fixed;
   left: 1%;
   bottom: 1%;
   width: 99%;
 }
-/* line 104, ../sass/_.scss */
+/* line 107, ../sass/_.scss */
 footer .signature {
   position: relative;
   right: 1%;

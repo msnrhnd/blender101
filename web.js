@@ -1,8 +1,3 @@
-
-/**
- * Node Sever Script 
- */
-
 var express = require('express'),
     routes = require('./routes'),
     http = require('http'),
@@ -16,12 +11,18 @@ app.configure(function() {
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
-app.configure('development', function(){
+app.configure('development', function() {
   app.use(express.errorHandler());
 });
 
-app.get('/', routes.index);
+app.get('/', function(req, res) {
+  var sec = '';
+  if (req.query.sec) {
+    sec = req.query.sec;
+  }
+  res.render('index', {sec: sec});
+});
 
-http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(app.get('port'), function() {
   console.log("Express server listening on port " + app.get('port'));
 });
