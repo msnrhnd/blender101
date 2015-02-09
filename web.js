@@ -16,11 +16,11 @@ app.configure('development', function() {
 });
 
 app.get('/', function(req, res) {
-  var sec = '';
-  if (req.query.sec) {
-    sec = req.query.sec;
+  var chap = '';
+  if (req.query.chap) {
+    chap = req.query.chap;
   }
-  res.render('index', {sec: sec});
+  res.render('index', {chap: chap});
 });
 
 http.createServer(app).listen(app.get('port'), function() {
