@@ -19,7 +19,6 @@ $(document).ready(function () {
     var emSize = parseFloat($("body").css("font-size"));
     return (emSize * input);
   }
-  margin = -em(4);
   $('button').click(function() {
     if($(this).hasClass('next')) {
       $target = $('#' + nearestSecId).next('section');
@@ -28,7 +27,7 @@ $(document).ready(function () {
     }
     var pos = $target.offset().top;
     $('html, body').animate({
-      scrollTop: pos + margin
+      scrollTop: pos - em(4)
     }, {
       queue: false
     });
