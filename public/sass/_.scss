@@ -91,6 +91,10 @@ emphasis {
   width: $side-width;
   border-top: 1px black solid;
   border-bottom: 1px black solid;
+  a {
+    text-align: center;
+    display: block;
+  }
 }
 
 .control-panel {

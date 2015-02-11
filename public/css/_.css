@@ -7732,22 +7732,27 @@ h1 {
   border-top: 1px black solid;
   border-bottom: 1px black solid;
 }
+/* line 94, ../sass/_.scss */
+#sidebar a {
+  text-align: center;
+  display: block;
+}
 
-/* line 96, ../sass/_.scss */
+/* line 100, ../sass/_.scss */
 .control-panel {
   position: fixed;
   bottom: 1%;
   margin: 0 auto;
 }
 
-/* line 102, ../sass/_.scss */
+/* line 106, ../sass/_.scss */
 footer {
   position: fixed;
   left: 1%;
   bottom: 1%;
   width: 99%;
 }
-/* line 107, ../sass/_.scss */
+/* line 111, ../sass/_.scss */
 footer .signature {
   position: relative;
   right: 1%;
