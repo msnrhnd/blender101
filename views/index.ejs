@@ -1,10 +1,11 @@
-<% include elements/header %>
+<% include partial/header %>
 <div class="main">
 <% if (chap) { %>
 <%- include(chap + '/index') %>
 <% } else { %>
-<h2>ブレンダー入門</h2>
+<h2 class="middle-center">ブレンダー入門</h2>
+<p>2015年2月21日 14:00〜</p>
 <% } %>
 </div><!-- .main -->
-<% include elements/side %>
-<% include elements/footer %>
+<% include partial/side %>
+<% include partial/footer %>

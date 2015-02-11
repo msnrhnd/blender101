@@ -1,6 +1,4 @@
-@import "bootstrap";
 @import "compass";
-@import "compass/css3/font-face";
 @import "compass/reset";
 @import "sassy-buttons";
 
@@ -10,7 +8,9 @@ $bevel: $full-width * .01;
 $main-width: ($full-width - $bevel * 2) * .84;
 $main-indent: $main-width * .2;
 $side-width: ($full-width - $bevel * 2) * .16;
-$header-height: 4rem;
+$header-height: 2rem;
+$base-color: #333333;
+$link-color: #428bca;
 
 @mixin fontsize($size: 24, $base: 16) {
   font-size: $size + px;
@@ -23,28 +23,38 @@ $header-height: 4rem;
 
 html {
   @include font;
-  @include fontsize(24);
+  @include fontsize(32);
+  color: $base-color;
   line-height: 1.6;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+  }
 }
 
 .header {
   position: fixed;
-  top: $bevel;
   left: $bevel;
   height: $header-height;
+  width: $main-width - $bevel * 2;
   background-color: white;
+  z-index: 1;
 }
 
 .container {
+  box-sizing: border-box;
   position: absolute;
   width: $full-width;
   margin: 0 auto;
-  padding: $bevel;
+  padding: 0 $bevel;
   min-height: $full-height * .6;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.2rem;
   margin-bottom: .8em;
 }
 
@@ -52,12 +62,14 @@ $btn-width: $main-width / 5;
 $btn-margin: $btn-width / 20;
 
 .main {
-  section {
-    min-height: 32rem;
-  }
+  position: relative;
   text-align: justify;
   padding: $header-height 0 0 $main-indent;
   width: $main-width;
+  box-sizing: border-box;
+  section {
+    min-height: 32rem;
+  }
   h2 {
     font-size: 1.6rem;
     margin-bottom: .4em;
@@ -71,6 +83,9 @@ $btn-margin: $btn-width / 20;
   }
   ul {
     margin-bottom: 1em;
+    li {
+      list-style-type: disc;
+    }
   }
   ol {
     margin-bottom: 1em;
@@ -78,19 +93,56 @@ $btn-margin: $btn-width / 20;
       list-style-type: decimal;
     }
   }
+  strong {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  img {
+    &.large {
+      width: 90%;
+      margin: 1rem;
+    }
+    &.middle {
+      width: 40%;
+      margin: 1rem;
+    }
+    &.small {
+      width: 20%;
+      margin: 1rem;
+    }
+  }
+}
+
+.middle_center {
+  text-align: center;
+  padding: 8rem 0;
 }
 
 emphasis {
 
 }
 
+.exercise {
+  margin-bottom: 1em;
+  &:before {
+    content: '\f0c6\00a0';
+    font-family: FontAwesome;
+  }
+}
+
+.hints {
+  padding: 1em;
+  margin-bottom: 1em;
+  @include border-radius(1em);
+  background-color: beige;
+}
+
 #sidebar {
   position: fixed;
-  top: $bevel;
+  top: 0;
   left: $main-width + $bevel;
   width: $side-width;
-  border-top: 1px black solid;
-  border-bottom: 1px black solid;
+  background-color: white;
   a {
     text-align: center;
     display: block;

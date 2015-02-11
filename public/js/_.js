@@ -4,14 +4,14 @@ $(document).ready(function () {
       $('#sidebar').append($('<a/>').attr('href', '/?chap=' + key).text(val));
     });
   });
-  var nearestSecId = $('section:first').attr('id');
+  var nearestSec = $('section:first');
   $(window).scroll(function() {
     $('section').each(function(i) {
       var temp = Math.abs($(this).offset().top - $(window).scrollTop());
       if (i == 0) nearestSecPos = temp;
       if (nearestSecPos >= temp) {
         nearestSecPos = temp;
-        nearestSecId = $(this).attr('id');
+        $nearestSec = $(this);
       }
     });
   });
@@ -21,33 +21,37 @@ $(document).ready(function () {
   }
   $('button').click(function() {
     if($(this).hasClass('next')) {
-      $target = $('#' + nearestSecId).next('section');
+      $target = $nearestSec.next('section');
     } else if ($(this).hasClass('prev')) {
-      $target = $('#' + nearestSecId).prev('section');
+      $target = $nearestSec.prev('section');
     }
     var pos = $target.offset().top;
-    $('html, body').animate({
-      scrollTop: pos - em(4)
-    }, {
-      queue: false
-    });
+    if($target.offset()){
+      $('html, body').animate({
+        scrollTop: pos - em(2)
+      }, {
+        queue: false
+      });
+    }
   });
   $('body').keydown(function (e) {
     switch(e.which) {
     case 37:
-      $target = $('#' + nearestSecId).prev('section');
+      $target = $nearestSec.prev('section');
       break;
     case 39:
-      $target = $('#' + nearestSecId).next('section');
+      $target = $nearestSec.next('section');
       break;
     default: return;
     }
-    var pos = $target.offset().top;
-    $('html, body').animate({
-      scrollTop: pos - em(4)
-    }, {
-      queue: false
-    });
+    if($target.offset()) {
+      var pos = $target.offset().top;
+      $('html, body').animate({
+        scrollTop: pos - em(2)
+      }, {
+        queue: false
+      });
+    }
     e.preventDefault();
   });
 });
