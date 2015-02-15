@@ -1,12 +1,51 @@
 <section id="shortcuts">
 <h2>よく使うショートカット</h2>
 <h3>マウス操作</h3>
-<table class="table table-condensed">
-<tr><td>オブジェクトを選択</td><td>右クリック</td><td>☆☆☆</td></tr>
-<tr><td></td><td></td><td></td><td></td></tr>
+<table>
+<tr><td>オブジェクトを選択</td><td>右クリック</td><td><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></td></tr>
+<tr><td>3Dカーソルの移動</td><td>左クリック</td><td></td><td></td></tr>
+<tr><td>操作の決定</td><td>左クリック</td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td><td></td></tr>
 </table>
-<h3>オブジェクトモード</h3>
+<h3>オブジェクトモード、エディットモードに共通</h3>
+<table>
+<tr><td>キャンセル</td><td><k>esc</k></td><td><i class="fa fa-star"><i class="fa fa-star"></i><i class="fa fa-star"></i></i></td></tr>
+<tr><td>3Dカーソルの移動</td><td><k>shift</k><i class="fa fa-plus"></i><k>S</k></td><td><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></td></tr>
+<tr><td>物体の追加</td><td><k>shift</k><i class="fa fa-plus"><k>A</k></td><td><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></td></tr>
+<tr><td>移動</td><td><k>G</k></td><td>☆☆</td></tr>
+<tr><td>拡大縮小</td><td><k>S</k></td><td>☆☆☆</td></tr>
+<tr><td>回転</td><td><k>R</k></td><td>☆☆☆</td></tr>
+</table>
 <h3>エディットモード</h3>
+</section>
+<tr><td>面を張る</td><td>[F]</td><td>☆☆☆</td></tr>
+<tr><td>形状の押し出し</td><td>[E]</td><td></td><td>☆☆☆</td></tr>
+<tr><td>直線、面で切る</td><td>[K]</td><td></td><td>☆☆☆</td></tr>
+<tr><td>分割</td><td>[W]</td><td></td><td>☆☆☆</td></tr>
+
+<section>
+<h2>よくある“困った”</h2>
+<h3>キーに反応しない</h3>
+<p>マウスポインタの位置が作業ペインからずれていると入力を受けとりません。</p>
+<h3>エディットモードで選択できない</h3>
+<p>頂点を選ぼうとしていのに面を指定していないか？</p>
+<h3>よくわからない表示になった、物体の形が変になった…</h3>
+<p>ブレンダーは非常にショートカットが多いので、ちょっと触れたキーでおかしなモードに入ってしまうことがあります。何か起こったら、[esc]を連打してみよう。</p>
+<h3>さっきまであった物体が消えた！画面に何も無くなった</h3>
+<p>違うレイヤーを見ているかも？[M]＋テンキーで他のレイヤーを見てみよう。</p>
+<h3>アンドゥできない</h3>
+<p>編集履歴はオブジェクトモードとエディットモードで別に記録されています。モードをトグルしてアンドゥしてみよう。</p>
+<h3>明るい色を付けているはずなのに黒っぽい面になってしまう</h3>
+<p>面には表と裏があり、裏を向いてしまっている可能性が高いです。</p>
+<ul>
+<li>簡単な形状であれば、Recalculateすると自動的にいい感じの面の向きになる</li>
+<li>複雑な形状の時は[N]→Normalsで面を選び、トゲの向きで表裏を判断。反転したい面を選択してFlip Direction。</li>
+</ul>
+<h3>ペインを分割してしまい、増えてしまった</h3>
+<p>各ペイン右上の三角ツマミをドラッグし、上か右のペインに重ねよう。左上のアイコンでペインの役割を選べば元通り。</p>
+<h3>広角レンズを覗いたような景色になってしまった</h3>
+<h3>頂点が重なってしまった</h3>
+<p>Remove Doublesとすると無駄な頂点が消えて気持ちがいい</p>
+
 </section>

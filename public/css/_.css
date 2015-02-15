@@ -109,7 +109,7 @@ h1 {
 .main {
   position: relative;
   text-align: justify;
-  padding: 2rem 0 0 16.464%;
+  padding: 2rem 0 0 8.232%;
   width: 82.32%;
   box-sizing: border-box;
 }
@@ -129,62 +129,112 @@ h1 {
 }
 /* line 81, ../sass/_.scss */
 .main p {
-  margin-bottom: 1em;
-}
-/* line 84, ../sass/_.scss */
-.main ul {
+  text-align: justify;
+  overflow: hidden;
   margin-bottom: 1em;
 }
 /* line 86, ../sass/_.scss */
-.main ul li {
-  list-style-type: disc;
-}
-/* line 90, ../sass/_.scss */
-.main ol {
+.main ul {
   margin-bottom: 1em;
 }
-/* line 92, ../sass/_.scss */
-.main ol li {
-  list-style-type: decimal;
+/* line 88, ../sass/_.scss */
+.main ul li {
+  line-height: 1.8em;
+  list-style-type: disc;
+}
+/* line 93, ../sass/_.scss */
+.main ol {
+  counter-reset: proc;
+  margin-bottom: 1em;
 }
 /* line 96, ../sass/_.scss */
+.main ol li {
+  line-height: 1.8em;
+  list-style-type: none;
+  text-indent: -1.4em;
+}
+/* line 100, ../sass/_.scss */
+.main ol li:before {
+  text-indent: .24em;
+  font-weight: bold;
+  display: inline-block;
+  counter-increment: proc;
+  content: counter(proc);
+  color: white;
+  background-color: #428bca;
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: .2em;
+  line-height: 1.2em;
+  -webkit-border-radius: 0.6em;
+  -moz-border-radius: 0.6em;
+  -ms-border-radius: 0.6em;
+  -o-border-radius: 0.6em;
+  border-radius: 0.6em;
+}
+/* line 116, ../sass/_.scss */
+.main k {
+  border: 0.18em solid #428bca;
+  padding: .1em .3em;
+  margin: 0 .2em;
+}
+/* line 121, ../sass/_.scss */
 .main strong {
   font-size: 1.2em;
   font-weight: bold;
 }
-/* line 101, ../sass/_.scss */
+/* line 126, ../sass/_.scss */
 .main img.large {
   width: 90%;
-  margin: 1rem;
+  margin: 0 1rem 1rem 0;
 }
-/* line 105, ../sass/_.scss */
-.main img.middle {
+/* line 130, ../sass/_.scss */
+.main img.medium {
   width: 40%;
-  margin: 1rem;
+  margin: 0 1rem 1rem 0;
 }
-/* line 109, ../sass/_.scss */
+/* line 134, ../sass/_.scss */
 .main img.small {
   width: 20%;
-  margin: 1rem;
+  margin: 0 1rem 1rem 0;
+}
+/* line 138, ../sass/_.scss */
+.main img.left {
+  float: left;
+}
+/* line 141, ../sass/_.scss */
+.main img.right {
+  float: right;
 }
 
-/* line 116, ../sass/_.scss */
+/* line 147, ../sass/_.scss */
 .middle_center {
   text-align: center;
   padding: 8rem 0;
 }
 
-/* line 125, ../sass/_.scss */
+/* line 152, ../sass/_.scss */
+.advanced {
+  margin-bottom: 1em;
+}
+/* line 154, ../sass/_.scss */
+.advanced:before {
+  content: '\f013\00a0';
+  color: #428bca;
+  font-family: FontAwesome;
+}
+
+/* line 161, ../sass/_.scss */
 .exercise {
   margin-bottom: 1em;
 }
-/* line 127, ../sass/_.scss */
+/* line 163, ../sass/_.scss */
 .exercise:before {
   content: '\f0c6\00a0';
   font-family: FontAwesome;
 }
 
-/* line 133, ../sass/_.scss */
+/* line 169, ../sass/_.scss */
 .hints {
   padding: 1em;
   margin-bottom: 1em;
@@ -196,35 +246,41 @@ h1 {
   background-color: beige;
 }
 
-/* line 140, ../sass/_.scss */
+/* line 176, ../sass/_.scss */
 #sidebar {
+  font-size: .74rem;
   position: fixed;
   top: 0;
   left: 83.32%;
   width: 15.68%;
   background-color: white;
 }
-/* line 146, ../sass/_.scss */
+/* line 183, ../sass/_.scss */
 #sidebar a {
   text-align: center;
   display: block;
 }
+/* line 186, ../sass/_.scss */
+#sidebar a:hover, #sidebar a.current {
+  color: white;
+  background-color: #428bca;
+}
 
-/* line 152, ../sass/_.scss */
+/* line 193, ../sass/_.scss */
 .control-panel {
   position: fixed;
   bottom: 1%;
   margin: 0 auto;
 }
 
-/* line 158, ../sass/_.scss */
+/* line 199, ../sass/_.scss */
 footer {
   position: fixed;
   left: 1%;
   bottom: 1%;
   width: 99%;
 }
-/* line 163, ../sass/_.scss */
+/* line 204, ../sass/_.scss */
 footer .signature {
   position: relative;
   right: 1%;

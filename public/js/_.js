@@ -1,7 +1,11 @@
 $(document).ready(function () {
   $.getJSON('/menu.json', function(data) {
+    var get = getUrlVars();
     $.each(data, function(key, val) {
-      $('#sidebar').append($('<a/>').attr('href', '/?chap=' + key).text(val));
+      $link = $('<a/>').attr('href', '/?chap=' + key).text(val)
+      if (get['chap'] == key) {
+      $link.addClass('current')} ;
+      $('#sidebar').append($link);
     });
   });
   var nearestSec = $('section:first');
@@ -54,4 +58,18 @@ $(document).ready(function () {
     }
     e.preventDefault();
   });
+  setInterval(function(){
+    $('.blink').fadeOut(200, function() { $(this).fadeIn(200) });
+  }, 200);
+  function getUrlVars() {
+    var vars = [],
+    hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for (var i = 0; i < hashes.length; i++) {
+      hash = hashes[i].split('=');
+      vars.push(hash[0]);
+      vars[hash[0]] = hash[1];
+    }
+    return vars;
+  }
 });
